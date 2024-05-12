@@ -76,7 +76,7 @@ class Discriminator(nn.Module):
                     nn.InstanceNorm2d(512), 
                     nn.LeakyReLU(0.2, inplace=True) ]
 
-        # FCN classification layer
+        
         model += [nn.Conv2d(512, 1, 4, padding=1)]
         self.model = nn.Sequential(*model)
 
